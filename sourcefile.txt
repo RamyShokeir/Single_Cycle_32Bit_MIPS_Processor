@@ -1,0 +1,13 @@
+Adder.v
+ALU.v
+ALU_Control_Unit.v
+Control_Unit.v
+Data_Memory.v
+Instruction_Memory.v
+Mux.v
+Program_Counter.v
+Register_File.v
+Shifter.v
+Sign_Extend.v
+Top_Module.v
+TB.v

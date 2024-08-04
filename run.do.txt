@@ -1,0 +1,33 @@
+vlib work
+vlog -f sourcefile.txt
+vsim -voptargs=+accs work.Processor_Top_TB
+add wave *
+add wave -position insertpoint  \
+sim:/Processor_Top_TB/DUT/U0_DATA/MemRead
+add wave -position insertpoint  \
+sim:/Processor_Top_TB/DUT/U0_DATA/MemWrite
+add wave -position insertpoint  \
+{sim:/Processor_Top_TB/DUT/U0_DATA/Data_Memory[28]}
+add wave -position insertpoint  \
+sim:/Processor_Top_TB/DUT/U0_DATA/Read_Data
+add wave -position insertpoint  \
+sim:/Processor_Top_TB/DUT/U0_RegFile/Read_Register_1
+add wave -position insertpoint  \
+sim:/Processor_Top_TB/DUT/U0_RegFile/Read_Register_2
+add wave -position insertpoint  \
+sim:/Processor_Top_TB/DUT/U0_Control/Op_Code \
+sim:/Processor_Top_TB/DUT/U0_Control/RegDst \
+sim:/Processor_Top_TB/DUT/U0_Control/Jump \
+sim:/Processor_Top_TB/DUT/U0_Control/Branch \
+sim:/Processor_Top_TB/DUT/U0_Control/MemRead \
+sim:/Processor_Top_TB/DUT/U0_Control/MemWrite \
+sim:/Processor_Top_TB/DUT/U0_Control/MemtoReg \
+sim:/Processor_Top_TB/DUT/U0_Control/ALUSrc \
+sim:/Processor_Top_TB/DUT/U0_Control/RegWrite \
+sim:/Processor_Top_TB/DUT/U0_Control/ALUOp
+add wave -position insertpoint  \
+sim:/Processor_Top_TB/DUT/U0_ALU/Zero
+add wave -position insertpoint  \
+sim:/Processor_Top_TB/DUT/U0_RegFile/Read_Data_1_regfile \
+sim:/Processor_Top_TB/DUT/U0_RegFile/Read_Data_2_regfile
+run -all
